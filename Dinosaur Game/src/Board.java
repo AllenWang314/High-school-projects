@@ -24,13 +24,13 @@ public class Board extends JPanel {
 		this.selectedDino = selectedDino;
 		this.walls = walls;
 		this.birds = birds;
-		try {
-			this.wall = ImageIO.read(new File("Wall.png"));
-			this.bird = ImageIO.read(new File("Bird.png"));
-		}
-		catch(IOException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			this.wall = ImageIO.read(new File("Wall.png"));
+//			this.bird = ImageIO.read(new File("Bird.png"));
+//		}
+//		catch(IOException e) {
+//			e.printStackTrace();
+//		}
 	}
 	
 	public int getSelectedDino() {
