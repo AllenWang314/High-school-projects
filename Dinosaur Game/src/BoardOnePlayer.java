@@ -20,13 +20,13 @@ public class BoardOnePlayer extends JPanel {
 		this.dino = dino;
 		this.walls = walls;
 		this.birds = birds;
-		try {
-			this.wall = ImageIO.read(new File("wall.png"));
-			this.bird = ImageIO.read(new File("bird.png"));
-		}
-		catch(IOException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			this.wall = ImageIO.read(new File("wall.png"));
+//			this.bird = ImageIO.read(new File("bird.png"));
+//		}
+//		catch(IOException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 	
@@ -43,15 +43,15 @@ public class BoardOnePlayer extends JPanel {
 		// Draw Walls
 		for (int i = 0; i < walls.size(); i++) {
 			if (walls.get(i).isVisible())
-				//g.drawRect(walls.get(i).getxCoord(), walls.get(i).getyCoord(), walls.get(i).getWidth(), walls.get(i).getHeight());
-				g.drawImage(wall, walls.get(i).getxCoord(), walls.get(i).getyCoord(), null);
+				g.drawRect(walls.get(i).getxCoord(), walls.get(i).getyCoord(), walls.get(i).getWidth(), walls.get(i).getHeight());
+				//g.drawImage(wall, walls.get(i).getxCoord(), walls.get(i).getyCoord(), null);
 		}
 		
 		// Draw Birds
 		for (int i = 0; i < birds.size(); i++) {
 			if (birds.get(i).isVisible())
-				//g.drawRect(birds.get(i).getxCoord(), birds.get(i).getyCoord(), birds.get(i).getWidth(), birds.get(i).getHeight());
-				g.drawImage(bird, birds.get(i).getxCoord(), birds.get(i).getyCoord(), null);
+				g.drawRect(birds.get(i).getxCoord(), birds.get(i).getyCoord(), birds.get(i).getWidth(), birds.get(i).getHeight());
+				//g.drawImage(bird, birds.get(i).getxCoord(), birds.get(i).getyCoord(), null);
 		}
 	}
 }
