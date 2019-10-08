@@ -1,8 +1,4 @@
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class HRTemplate {
     public static void main(String args[] ) throws Exception {
@@ -11,6 +7,7 @@ public class HRTemplate {
         while (scanner.hasNext()){
             info.add(Integer.parseInt(scanner.next()));
         }
+        scanner.close();
     }
 }
 
