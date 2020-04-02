@@ -3,10 +3,10 @@ public class BinarySearch4 {
 	
 	// inclusive of both low and high
 	public static int bs(int low, int high) {
-		while(high > low + 1) {
+		while(high >= low + 1) {
 			int mid = (low + high)/2;
 			if(possible(mid)) high = mid;
-			else low = mid;
+			else low = mid+1;
 		}
 		return high;
 	}
@@ -16,6 +16,6 @@ public class BinarySearch4 {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(bs(1, 900));
+		System.out.println(bs(29, 30));
 	}
 }
